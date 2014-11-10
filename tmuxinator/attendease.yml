@@ -1,0 +1,45 @@
+# ~/.tmuxinator/attendease.yml
+
+name: attendease
+root: ~/Sites
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+# pre: git co master
+# pre: git pull
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - attendease:
+      layout: tiled
+      panes:
+        - cd Attendease && clear
+        - cd Attendease
+        - cd Attendease && bundle exec rails s 
+        - cd Attendease && bundle exec rails c
+  - thirdparty:
+      layout: tiled
+      panes:
+        - cd Attendease-Third-Party-Themes
+        - cd Attendease-Third-Party-Themes
+        - cd Attendease-Third-Party-Themes
+        - cd Attendease-Third-Party-Themes
+  - creativecloud:
+      layout: tiled
+      panes:
+        - cd Attendease/var/organizations/creativecloud
+        - cd Attendease/var/organizations/creativecloud
+        - cd Attendease/var/organizations/creativecloud && bundle && jekyll serve --watch --destination ../../../public/organizations/creativecloud.localhost.attendease.org
+        - cd Attendease/var/organizations/creativecloud
+  - ssh:
