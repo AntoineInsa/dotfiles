@@ -7,11 +7,16 @@ export EDITOR='vim'
 
 ### ALIASES
 
+alias refresh="source ~/.bash_profile"
+
 alias restart-nginx="kill -HUP \`cat /usr/local/var/run/nginx.pid\`"
 alias ms="git checkout master;git fetch upstream;git merge upstream/master;git push origin master"
+alias ms-og="git checkout master; git fetch origin;git merge origin/master"
 alias pr="hub pull-request -b coverall:master"
 alias deploybot="ssh -p 2242 deploybot@deploybot.coverallcrew.com"
 
+alias attendease="tmuxinator start attendease"
+alias ayv="tmuxinator start ayv"
 
 ### BASH CUSTOMIZATION
 
