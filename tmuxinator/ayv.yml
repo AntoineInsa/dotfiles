@@ -1,0 +1,38 @@
+# ~/.tmuxinator/ayv.yml
+
+name: ayv
+root: ~/Sites
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+# pre: git co master
+# pre: git pull
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+windows:
+  - AYV:
+      layout: tiled
+      panes:
+        - cd youthvoices.adobe.com && clear
+        - cd youthvoices.adobe.com
+        - cd youthvoices.adobe.com && bundle exec rails s
+        - cd youthvoices.adobe.com && bundle exec rails c
+  - AYVgallery:
+      layout: tiled
+      panes:
+        - cd adobe-youth-voices && clear
+        - cd adobe-youth-voices && clear
+        - cd adobe-youth-voices && bundle exec rails s
+        - cd adobe-youth-voices && bundle exec rails c
+  - ssh:
