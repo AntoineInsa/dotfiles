@@ -1,21 +1,26 @@
 [user]
-	name = Antoine Censi
-	email = antoine.censi@gmail.com
+  name = Antoine Censi
+  email = antoine.censi@gmail.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [color]
-	ui = true
+  ui = true
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
 [push]
-	default = tracking
+  default = tracking
 [alias]
-    sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-    sapply = "!f() { git stash apply stash^{/$*}; }; f"
-	stash-unapply = !git stash show -p | git apply -R
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  stash-unapply = !git stash show -p | git apply -R
+  slist = "stash list"
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  sunapply = stash-unapply
+  sclear = "stash clear"
+  spop = "!f() { git stash pop stash@{/$*}; }; f"
+  sdrop = "!f() { git stash drop stash@{/$*}; }; f"
