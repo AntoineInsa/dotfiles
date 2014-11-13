@@ -21,14 +21,14 @@ root: ~/Sites
 # tmux_command: byobu
 
 windows:
-  - AYV:
+  - ayv:
       layout: tiled
       panes:
         - cd youthvoices.adobe.com && clear
         - cd youthvoices.adobe.com
         - cd youthvoices.adobe.com && bundle exec rails s
         - cd youthvoices.adobe.com && bundle exec rails c
-  - AYVgallery:
+  - ayv_gallery:
       layout: tiled
       panes:
         - cd adobe-youth-voices && clear
