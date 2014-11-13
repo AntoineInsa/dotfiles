@@ -1,0 +1,3 @@
+TAGS=
+DOTFILES_DIRS=~/.dotfiles
+EXCLUDES=examples
