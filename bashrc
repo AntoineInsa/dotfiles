@@ -9,14 +9,27 @@ export EDITOR='vim'
 
 alias refresh="source ~/.bash_profile"
 
-alias restart-nginx="kill -HUP \`cat /usr/local/var/run/nginx.pid\`"
+# Git
+
 alias ms="git checkout master;git fetch upstream;git merge upstream/master;git push origin master"
 alias ms-og="git checkout master; git fetch origin;git merge origin/master"
 alias pr="hub pull-request -b coverall:master"
-alias deploybot="ssh -p 2242 deploybot@deploybot.coverallcrew.com"
 
+# Projects
+alias deploybot="ssh -p 2242 deploybot@deploybot.coverallcrew.com"
 alias attendease="tmuxinator start attendease"
 alias ayv="tmuxinator start ayv"
+
+# Attendease
+alias pr-prod="bundle exec rake deploy:check_pull_requests[deploy-production*]"
+alias pr-stag="bundle exec rake deploy:check_pull_requests[deploy-staging*]"
+
+# Rails
+alias console="bundle exec rails c"
+alias server="bundle exec rails s"
+
+# Other
+alias restart-nginx="kill -HUP \`cat /usr/local/var/run/nginx.pid\`"
 
 ### BASH CUSTOMIZATION
 
