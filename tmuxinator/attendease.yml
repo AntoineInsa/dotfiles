@@ -25,21 +25,21 @@ windows:
       layout: tiled
       panes:
         - cd Attendease && clear
-        - cd Attendease
-        - cd Attendease && bundle exec rails s
-        - cd Attendease && bundle exec rails c
+        - cd Attendease && clear
+        - cd Attendease && clear && bundle exec rails s
+        - cd Attendease && clear && bundle exec rails c
   - thirdparty:
       layout: tiled
       panes:
-        - cd Attendease-Third-Party-Themes
-        - cd Attendease-Third-Party-Themes
-        - cd Attendease-Third-Party-Themes
-        - cd Attendease-Third-Party-Themes
+        - cd Attendease-Third-Party-Themes && clear
+        - cd Attendease-Third-Party-Themes && clear
+        - cd Attendease-Third-Party-Themes && clear
+        - cd Attendease-Third-Party-Themes && clear
   - creativecloud:
       layout: tiled
       panes:
-        - cd Attendease/var/organizations/creativecloud
-        - cd Attendease/var/organizations/creativecloud
-        - cd Attendease/var/organizations/creativecloud && bundle && jekyll serve --watch --destination ../../../public/organizations/creativecloud.localhost.attendease.org
-        - cd Attendease/var/organizations/creativecloud
+        - cd Attendease/var/organizations/creativecloud && clear
+        - cd Attendease/var/organizations/creativecloud && clear
+        - cd Attendease/var/organizations/creativecloud && clear && bundle && jekyll serve --watch --destination ../../../public/organizations/creativecloud.localhost.attendease.org
+        - cd Attendease/var/organizations/creativecloud && clear
   - ssh:

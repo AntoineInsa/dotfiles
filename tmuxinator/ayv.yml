@@ -25,14 +25,14 @@ windows:
       layout: tiled
       panes:
         - cd youthvoices.adobe.com && clear
-        - cd youthvoices.adobe.com
-        - cd youthvoices.adobe.com && bundle exec rails s
-        - cd youthvoices.adobe.com && bundle exec rails c
+        - cd youthvoices.adobe.com && clear
+        - cd youthvoices.adobe.com && clear && bundle exec rails s
+        - cd youthvoices.adobe.com && clear && bundle exec rails c
   - ayv_gallery:
       layout: tiled
       panes:
         - cd adobe-youth-voices && clear
         - cd adobe-youth-voices && clear
-        - cd adobe-youth-voices && bundle exec rails s
-        - cd adobe-youth-voices && bundle exec rails c
+        - cd adobe-youth-voices && clear && bundle exec rails s -p 3001
+        - cd adobe-youth-voices && clear && bundle exec rails c
   - ssh:
